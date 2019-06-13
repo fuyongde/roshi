@@ -28,108 +28,52 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
 
-        <!--dependencies properties-->
-        <junit.version>4.12</junit.version>
-        <guava.version>27.0-jre</guava.version>
-        <dozer.version>5.5.1</dozer.version>
-        <commons-codec.version>1.11</commons-codec.version>
-        <commons-text.version>1.6</commons-text.version>
-        <commons-io.version>2.6</commons-io.version>
-        <pinyin4j.version>2.5.1</pinyin4j.version>
-        <lombok.version>1.18.4</lombok.version>
-        <urlbuilder.version>2.0.9</urlbuilder.version>
-        <logback-classic.version>1.2.3</logback-classic.version>
         <hadoop.version>2.9.2</hadoop.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/junit/junit -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/net.sf.dozer/dozer -->
-            <dependency>
-                <groupId>net.sf.dozer</groupId>
-                <artifactId>dozer</artifactId>
-                <version>${dozer.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.commons</groupId>
-                        <artifactId>commons-lang3</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-text</artifactId>
-                <version>${commons-text.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-            <dependency>
-                <groupId>commons-codec</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>${commons-codec.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>${commons-io.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/io.mikael/urlbuilder -->
-            <dependency>
-                <groupId>io.mikael</groupId>
-                <artifactId>urlbuilder</artifactId>
-                <version>${urlbuilder.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.belerweb/pinyin4j -->
-            <dependency>
-                <groupId>com.belerweb</groupId>
-                <artifactId>pinyin4j</artifactId>
-                <version>${pinyin4j.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback-classic.version}</version>
-            </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs -->
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-hdfs</artifactId>
                 <version>${hadoop.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-mapreduce-client-app</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-mapreduce-client-hs</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-mapreduce-client-hs-plugins</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-mapreduce-client-shuffle</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-core -->
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-mapreduce-client-core</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-common -->
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-mapreduce-client-common</artifactId>
                 <version>${hadoop.version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->
