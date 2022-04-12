@@ -28,7 +28,7 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
 
-        <hadoop.version>2.9.2</hadoop.version>
+        <hadoop.version>3.2.3</hadoop.version>
     </properties>
 
     <dependencyManagement>
